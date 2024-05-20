@@ -18,3 +18,5 @@ echo "Mi nombre es $Nombre, tengo $Edad años y vivo en $Ciudad"
 
 #Imprimir el texto con variables
 echo "Mi actividad favorita es $actividad. Mi comida favorita es $comida"
+
+sleep 7
