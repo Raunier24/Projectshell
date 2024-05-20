@@ -7,7 +7,7 @@ read -p "Edad: " Edad
 read -p "Ciudad: " Ciudad
 
 # Solicitar entrada por consola
-echo "Ingresar tu actividad favorita:" actividad
+echo "Ingresar tu actividad favorita:"
 read actividad
 
 echo "Ingresa tu comida favorita:"
