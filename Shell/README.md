@@ -185,7 +185,8 @@ echo "Su edad es: $edad años"
 o	echo: Imprime un mensaje en la consola.
 o	$edad: Inserta el valor de la variable edad en el mensaje.
 
--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
 Este script de "Bucle" desafía al usuario a adivinar el PID (identificador de proceso) del propio script. El script utiliza un bucle while para repetir la solicitud de un número hasta que el usuario adivine correctamente el PID. El script muestra mensajes de pista para guiar al usuario, indicando si el número ingresado es menor, mayor o igual al PID real.
 Explicación paso a paso:
 1.	Obtener el PID:
