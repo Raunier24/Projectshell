@@ -167,23 +167,23 @@ Explicación paso a paso:
 La primera línea del script solicita al usuario que ingrese su fecha de nacimiento:
 Bash
 read -p "Por favor, ingrese su fecha de nacimiento (formato: YYYY-MM-DD): " fecha_nacimiento
-o	read -p: Lee la entrada del usuario y la almacena en la variable fecha_nacimiento.
-o	-p: Indica al script que muestre un mensaje previo a la entrada del usuario.
+	read -p: Lee la entrada del usuario y la almacena en la variable fecha_nacimiento.
+	-p: Indica al script que muestre un mensaje previo a la entrada del usuario.
 2.	Cálculo de edad:
 La siguiente línea calcula la edad del usuario:
 Bash
 edad=$((($(date +%s) - $(date -d "$fecha_nacimiento" +%s)) / 31536000))
-o	$(date +%s): Obtiene la fecha actual del sistema en formato de marca de tiempo (segundos desde la época Unix).
-o	$(date -d "$fecha_nacimiento" +%s): Obtiene la fecha de nacimiento ingresada por el usuario en formato de marca de tiempo.
-o	$(( )): Realiza una operación aritmética dentro de la cadena.
-o	/ 31536000: Divide la diferencia de segundos por la cantidad de segundos en un año (31536000) para obtener la edad en años.
-o	edad=$(( )): Almacena el resultado de la operación en la variable edad.
+	$(date +%s): Obtiene la fecha actual del sistema en formato de marca de tiempo (segundos desde la época Unix).
+	$(date -d "$fecha_nacimiento" +%s): Obtiene la fecha de nacimiento ingresada por el usuario en formato de marca de tiempo.
+	$(( )): Realiza una operación aritmética dentro de la cadena.
+	/ 31536000: Divide la diferencia de segundos por la cantidad de segundos en un año (31536000) para obtener la edad en años.
+	edad=$(( )): Almacena el resultado de la operación en la variable edad.
 3.	Mostrar la edad:
 La última línea del script muestra un mensaje personalizado con la edad calculada:
 Bash
 echo "Su edad es: $edad años"
-o	echo: Imprime un mensaje en la consola.
-o	$edad: Inserta el valor de la variable edad en el mensaje.
+	echo: Imprime un mensaje en la consola.
+	$edad: Inserta el valor de la variable edad en el mensaje.
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Este script de "Bucle" desafía al usuario a adivinar el PID (identificador de proceso) del propio script. El script utiliza un bucle while para repetir la solicitud de un número hasta que el usuario adivine correctamente el PID. El script muestra mensajes de pista para guiar al usuario, indicando si el número ingresado es menor, mayor o igual al PID real.
@@ -192,29 +192,29 @@ Explicación paso a paso:
 La primera línea del script obtiene el PID del script actual y lo almacena en la variable pid:
 Bash
 pid=$$
-o	$$: Variable especial que contiene el PID del script actual.
+	$$: Variable especial que contiene el PID del script actual.
 2.	Inicializar el contador:
 La siguiente línea inicializa la variable intentos en 0:
 Bash
 intentos=0
-o	intentos=0: Asigna el valor 0 a la variable intentos.
+	intentos=0: Asigna el valor 0 a la variable intentos.
 3.	Bucle de adivinanza:
 El siguiente bloque de código implementa el bucle while de adivinanza:
 Bash
 while true; do
-o	while true; do: Inicia un bucle while que se repite infinitamente hasta que se encuentre una instrucción break dentro del bucle.
+	while true; do: Inicia un bucle while que se repite infinitamente hasta que se encuentre una instrucción break dentro del bucle.
 Dentro del bucle, se realizan las siguientes acciones:
-o	Incrementar contador:
+	Incrementar contador:
 Bash
 ((intentos++))
-	((intentos++)): Incrementa el valor de la variable intentos en 1.
-o	Solicitar número:
+	((intentos++)): Incrementa el valor de la variable intentos en 1.
+	Solicitar número:
 Bash
 echo "Intento $intentos. Ingrese un número:"
 read numero
-	echo: Imprime un mensaje indicando el número de intento y solicitando al usuario que ingrese un número.
-	read numero: Lee la entrada del usuario y la almacena en la variable numero.
-o	Verificar número:
+	echo: Imprime un mensaje indicando el número de intento y solicitando al usuario que ingrese un número.
+	read numero: Lee la entrada del usuario y la almacena en la variable numero.
+	Verificar número:
 Bash
 if [ $numero -eq $pid ]; then
   echo "¡Felicidades! Adivinaste el PID en $intentos intentos."
@@ -224,27 +224,27 @@ elif [ $numero -lt $pid ]; then
 else
   echo "El número ingresado es mayor que el PID."
 fi
-	if: Comienza una instrucción condicional.
-	`[ $numero -eq $pid
+	if: Comienza una instrucción condicional.
+	`[ $numero -eq $pid
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 Este script de "Bucle2" permite agregar y borrar archivos en el sistema. El script solicita al usuario que ingrese el nombre de un archivo para crear, luego espera unos segundos, muestra la lista de archivos actuales y, finalmente, pregunta si el usuario desea borrar un archivo. Si el usuario elige borrar un archivo, el script solicita el nombre del archivo a borrar y lo elimina.
 
 Explicación paso a paso:
 1.	Agregar un archivo:
-o	Las primeras líneas solicitan al usuario el nombre del archivo que desea agregar y almacenan la entrada en la variable nombre_archivo.
-o	El comando touch "$nombre_archivo" crea un archivo vacío con el nombre especificado en $nombre_archivo.
-o	Un mensaje de confirmación indica al usuario que el archivo se ha agregado correctamente.
+	Las primeras líneas solicitan al usuario el nombre del archivo que desea agregar y almacenan la entrada en la variable nombre_archivo.
+	El comando touch "$nombre_archivo" crea un archivo vacío con el nombre especificado en $nombre_archivo.
+	Un mensaje de confirmación indica al usuario que el archivo se ha agregado correctamente.
 2.	Esperar 3 segundos:
-o	El comando sleep 3 introduce una pausa de 3 segundos antes de continuar con la siguiente acción.
+	El comando sleep 3 introduce una pausa de 3 segundos antes de continuar con la siguiente acción.
 3.	Mostrar la lista de archivos:
-o	El comando ls se ejecuta para mostrar una lista de todos los archivos y directorios presentes en el directorio actual.
+	El comando ls se ejecuta para mostrar una lista de todos los archivos y directorios presentes en el directorio actual.
 4.	Preguntar si se desea borrar un archivo:
-o	Se solicita al usuario si desea borrar un archivo, almacenando la respuesta en la variable respuesta.
+	Se solicita al usuario si desea borrar un archivo, almacenando la respuesta en la variable respuesta.
 5.	Borrar un archivo:
-o	Si la respuesta del usuario es "s" (sí):
-	Se solicita al usuario el nombre del archivo que desea borrar, almacenándolo en la variable nombre_a_borrar.
-	El comando rm -i "$nombre_a_borrar" elimina el archivo especificado en $nombre_a_borrar, con la opción -i para solicitar confirmación antes de eliminar.
-	Un mensaje de confirmación indica al usuario que el archivo se ha borrado correctamente.
-o	Si la respuesta del usuario es "n" (no):
-	Se imprime un mensaje indicando que no se borrará ningún archivo.
+	Si la respuesta del usuario es "s" (sí):
+	Se solicita al usuario el nombre del archivo que desea borrar, almacenándolo en la variable nombre_a_borrar.
+	El comando rm -i "$nombre_a_borrar" elimina el archivo especificado en $nombre_a_borrar, con la opción -i para solicitar confirmación antes de eliminar.
+	Un mensaje de confirmación indica al usuario que el archivo se ha borrado correctamente.
+	Si la respuesta del usuario es "n" (no):
+	Se imprime un mensaje indicando que no se borrará ningún archivo.

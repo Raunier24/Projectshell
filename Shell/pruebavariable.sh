@@ -1,20 +1,20 @@
 #!/bin/bash
 
 # Definición de variables
-nombre=Raunier
-edad=105
-ciudad=Madrid
+echo "Introduce tus datos personales"
+read -p "Nombre: " Nombre
+read -p "Edad: " Edad
+read -p "Ciudad: " Ciudad
 
 # Solicitar entrada por consola
-echo "Ingresar tu actividad favorita:"
+echo "Ingresar tu actividad favorita:" actividad
 read actividad
 
 echo "Ingresa tu comida favorita:"
 read comida
 
 # Imprimir el texto con variables
-echo Mi nombre es $nombre, tengo $edad años y vivo en $ciudad
+echo "Mi nombre es $Nombre, tengo $Edad años y vivo en $Ciudad"
 
 #Imprimir el texto con variables
 echo "Mi actividad favorita es $actividad. Mi comida favorita es $comida"
-
