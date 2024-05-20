@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Obtener el PID del script
-pid=$$
-echo "El PID de este script es $$"
+
+# comando para saber el PID del script e imprimirlo: pid=$$ echo "El PID de este script es $$"
+
 # Inicializar el contador de intentos
 intentos=0
 
