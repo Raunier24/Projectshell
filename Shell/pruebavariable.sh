@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Definición de variables
+# Definición e impresión de variables
 echo "Introduce tus datos personales"
 read -p "Nombre: " Nombre
 read -p "Edad: " Edad

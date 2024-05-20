@@ -22,31 +22,31 @@ echo "Introduce 3 Modelos de celulares"
 read celular1
 read celular2
 read celular3
-o	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
-o	read: Lee la entrada del usuario y la almacena en la variable correspondiente (celular1, celular2 o celular3).
+	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
+	read: Lee la entrada del usuario y la almacena en la variable correspondiente (celular1, celular2 o celular3).
 2.	Impresión de modelos:
 Las siguientes líneas imprimen el primer y tercer modelo de celular introducidos por el usuario:
 Bash
 echo "Los Celulares más caros son: $celular1"
 echo "Los Celulares más vendidos son: $celular3"
-o	$celular1 y $celular3: Se reemplazan estas variables por sus valores respectivos dentro del texto.
+	$celular1 y $celular3: Se reemplazan estas variables por sus valores respectivos dentro del texto.
 3.	Solicitud de color:
 Las siguientes líneas solicitan al usuario que introduzca un color de preferencia:
 Bash
 echo "Introduce el color que deseas"
 read Color
-o	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
-o	read: Lee la entrada del usuario y la almacena en la variable Color.
+	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
+	read: Lee la entrada del usuario y la almacena en la variable Color.
 4.	Conteo de parámetros:
 La siguiente línea cuenta la cantidad de parámetros introducidos por el usuario (en este caso, siempre serán 3):
 Bash
 cantidad_parametros=3
-o	cantidad_parametros: Se asigna el valor 3 a esta variable, ya que el script siempre espera 3 modelos de celulares.
+	cantidad_parametros: Se asigna el valor 3 a esta variable, ya que el script siempre espera 3 modelos de celulares.
 5.	Completar y mostrar la frase final:
 La última línea del script completa y muestra la frase final con la información introducida y la cantidad de parámetros:
 Bash
 echo "Con el color $Color existen $cantidad_parametros celulares"
-o	$Color y $cantidad_parametros: Se reemplazan estas variables por sus valores respectivos dentro del texto.
+	$Color y $cantidad_parametros: Se reemplazan estas variables por sus valores respectivos dentro del texto.
 
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
@@ -57,25 +57,25 @@ Explicación paso a paso:
 La primera línea del script solicita al usuario que ingrese su nombre de usuario:
 Bash
 read -p "Ingrese su usuario para una rápida Verificación: "
-o	read: Lee la entrada del usuario y la almacena en la variable usuario.
-o	-p: Indica al script que muestre un mensaje previo a la entrada del usuario.
+	read: Lee la entrada del usuario y la almacena en la variable usuario.
+	-p: Indica al script que muestre un mensaje previo a la entrada del usuario.
 2.	Verificación de permisos:
 La siguiente línea compara el nombre de usuario ingresado con el usuario root ("root"):
 Bash
 if [ "$usuario" != "root" ]; then
-o	if: Comienza una instrucción condicional.
-o	[ "$usuario" != "root" ]: Compara el valor de $usuario con "root" usando la instrucción [ ].
-o	fi: Termina la instrucción condicional.
+	if: Comienza una instrucción condicional.
+	[ "$usuario" != "root" ]: Compara el valor de $usuario con "root" usando la instrucción [ ].
+	fi: Termina la instrucción condicional.
 3.	Mensaje de error:
 Las siguientes líneas muestran un mensaje de error si el usuario no es root:
 Bash
 echo "No tiene acceso como root. Por favor, ejecute el script con un usuario root."
-o	echo: Imprime un mensaje en la consola.
+	echo: Imprime un mensaje en la consola.
 4.	Espera de 3 segundos:
 La siguiente línea hace que el script espere 3 segundos antes de mostrar el mensaje de error:
 Bash
 sleep 3
-o	sleep: Hace que el script se pause durante la cantidad de segundos especificada (en este caso, 3).
+	sleep: Hace que el script se pause durante la cantidad de segundos especificada (en este caso, 3).
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
@@ -88,41 +88,41 @@ echo "Ingrese el primer número: "
 read n1
 echo "Ingrese el segundo número: "
 read n2
-o	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
-o	read: Lee la entrada del usuario y la almacena en la variable correspondiente (n1 o n2).
+	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
+	read: Lee la entrada del usuario y la almacena en la variable correspondiente (n1 o n2).
 2.	Comparación de números:
 La siguiente instrucción condicional compara los números ingresados:
 Bash
 if [ "$n1" == "$n2" ]; then
-o	if: Comienza una instrucción condicional.
-o	[ "$n1" == "$n2" ]: Compara el valor de $n1 con $n2 usando la instrucción [ ] y el operador de igualdad (==).
-o	fi: Termina la instrucción condicional.
+	if: Comienza una instrucción condicional.
+	[ "$n1" == "$n2" ]: Compara el valor de $n1 con $n2 usando la instrucción [ ] y el operador de igualdad (==).
+	fi: Termina la instrucción condicional.
 3.	Mensaje de números iguales:
 Las siguientes líneas muestran un mensaje si los números son iguales:
 Bash
 echo "Los números ingresados son iguales."
-o	echo: Imprime un mensaje en la consola.
+	echo: Imprime un mensaje en la consola.
 4.	Comparación de n1 y n2:
 Si los números no son iguales, el script entra en la siguiente instrucción elif:
 Bash
 elif [ "$n1" -gt "$n2" ]; then
-o	elif: Comienza una instrucción condicional alternativa.
-o	[ "$n1" -gt "$n2" ]: Compara el valor de $n1 con $n2 usando la instrucción [ ] y el operador de mayor que (-gt).
-o	fi: Termina la instrucción condicional.
+	elif: Comienza una instrucción condicional alternativa.
+	[ "$n1" -gt "$n2" ]: Compara el valor de $n1 con $n2 usando la instrucción [ ] y el operador de mayor que (-gt).
+	fi: Termina la instrucción condicional.
 5.	Mensaje de n1 mayor:
 Las siguientes líneas muestran un mensaje si n1 es mayor que n2:
 Bash
 echo "n1 es mayor que n2."
-o	echo: Imprime un mensaje en la consola.
+	echo: Imprime un mensaje en la consola.
 6.	Mensaje de n2 mayor:
 Si n1 no es mayor que n2, el script entra en la última instrucción else:
 Bash
 else
 echo "n2 es mayor que n1."
 fi
-o	else: Comienza una instrucción condicional alternativa.
-o	echo: Imprime un mensaje en la consola.
-o	fi: Termina la instrucción condicional.
+	else: Comienza una instrucción condicional alternativa.
+	echo: Imprime un mensaje en la consola.
+	fi: Termina la instrucción condicional.
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
@@ -133,30 +133,30 @@ La primera línea del script solicita al usuario que ingrese un número:
 Bash
 echo "Ingrese un valor: "
 read value
-o	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
-o	read: Lee la entrada del usuario y la almacena en la variable value.
+	echo: Imprime un mensaje en la consola para indicar al usuario qué debe ingresar.
+	read: Lee la entrada del usuario y la almacena en la variable value.
 2.	Verificación de divisibilidad:
 La siguiente instrucción condicional verifica si el número ingresado es divisible por 2:
 Bash
 if [ $(($value % 2)) -eq 0 ]; then
-o	if: Comienza una instrucción condicional.
-o	$(($value % 2)): Calcula el residuo de la división del valor ingresado ($value) por 2 (% 2) y almacena el resultado en una variable temporal.
-o	-eq 0: Compara el valor de la variable temporal con 0 usando la instrucción [ ] y el operador de igualdad (==).
-o	fi: Termina la instrucción condicional.
+	if: Comienza una instrucción condicional.
+	$(($value % 2)): Calcula el residuo de la división del valor ingresado ($value) por 2 (% 2) y almacena el resultado en una variable temporal.
+	-eq 0: Compara el valor de la variable temporal con 0 usando la instrucción [ ] y el operador de igualdad (==).
+	fi: Termina la instrucción condicional.
 3.	Mensaje de divisible por 2:
 Las siguientes líneas muestran un mensaje si el número es divisible por 2:
 Bash
 echo "El valor ingresado es divisible por 2."
-o	echo: Imprime un mensaje en la consola.
+	echo: Imprime un mensaje en la consola.
 4.	Mensaje de no divisible por 2:
 Si el número no es divisible por 2, el script entra en la última instrucción else:
 Bash
 else
 echo "El valor ingresado no es divisible por 2."
 fi
-o	else: Comienza una instrucción condicional alternativa.
-o	echo: Imprime un mensaje en la consola.
-o	fi: Termina la instrucción condicional.
+	else: Comienza una instrucción condicional alternativa.
+	echo: Imprime un mensaje en la consola.
+	fi: Termina la instrucción condicional.
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
