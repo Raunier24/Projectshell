@@ -2,7 +2,7 @@ El propósito del Scrip "a-variable" es interactuar con el usuario solicitando c
 Funcionamiento del Script
 1.	Definición de Variables:
 	Se definen tres variables nombre, edad y ciudad con valores preestablecidos.
-2.	Solicitar Entrada al Usuario:
+2.	Solicitar Entrada al Usuario: 
 	echo "Ingresar tu actividad favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su actividad favorita.
 	read actividad captura la entrada del usuario y la almacena en la variable actividad.
 	echo "Ingresa tu comida favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su comida favorita.
