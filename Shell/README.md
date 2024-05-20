@@ -2,7 +2,7 @@ El propósito del Scrip "a-variable" es interactuar con el usuario solicitando c
 Funcionamiento del Script
 1.	Definición de Variables:
 	Se definen tres variables nombre, edad y ciudad con valores preestablecidos.
-2.	Solicitar Entrada al Usuario:
+2.	Solicitar Entrada al Usuario: 
 	echo "Ingresar tu actividad favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su actividad favorita.
 	read actividad captura la entrada del usuario y la almacena en la variable actividad.
 	echo "Ingresa tu comida favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su comida favorita.
@@ -185,7 +185,8 @@ echo "Su edad es: $edad años"
 	echo: Imprime un mensaje en la consola.
 	$edad: Inserta el valor de la variable edad en el mensaje.
 
--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
 Este script de "Bucle" desafía al usuario a adivinar el PID (identificador de proceso) del propio script. El script utiliza un bucle while para repetir la solicitud de un número hasta que el usuario adivine correctamente el PID. El script muestra mensajes de pista para guiar al usuario, indicando si el número ingresado es menor, mayor o igual al PID real.
 Explicación paso a paso:
 1.	Obtener el PID:
