@@ -1,15 +1,15 @@
 El propósito del Scrip "a-variable" es interactuar con el usuario solicitando ciertas entradas, y luego mostrar una salida formateada que combina tanto las variables definidas dentro del script como las entradas proporcionadas por el usuario.
 Funcionamiento del Script
 1.	Definición de Variables:
-o	Se definen tres variables nombre, edad y ciudad con valores preestablecidos.
+	Se definen tres variables nombre, edad y ciudad con valores preestablecidos.
 2.	Solicitar Entrada al Usuario:
-o	echo "Ingresar tu actividad favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su actividad favorita.
-o	read actividad captura la entrada del usuario y la almacena en la variable actividad.
-o	echo "Ingresa tu comida favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su comida favorita.
-o	read comida captura la entrada del usuario y la almacena en la variable comida.
+	echo "Ingresar tu actividad favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su actividad favorita.
+	read actividad captura la entrada del usuario y la almacena en la variable actividad.
+	echo "Ingresa tu comida favorita:" imprime un mensaje en la consola pidiendo al usuario que ingrese su comida favorita.
+	read comida captura la entrada del usuario y la almacena en la variable comida.
 3.	Impresión de Resultados:
-o	echo Mi nombre es $nombre, tengo $edad años y vivo en $ciudad imprime un mensaje que incluye las variables predefinidas del script.
-o	echo "Mi actividad favorita es $actividad. Mi comida favorita es $comida" imprime un mensaje que incluye las entradas del usuario.
+	echo Mi nombre es $nombre, tengo $edad años y vivo en $ciudad imprime un mensaje que incluye las variables predefinidas del script.
+	echo "Mi actividad favorita es $actividad. Mi comida favorita es $comida" imprime un mensaje que incluye las entradas del usuario.
 
 -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
 
